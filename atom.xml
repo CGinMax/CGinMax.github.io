@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://cginmax.github.io/"/>
-  <updated>2018-11-12T04:59:31.831Z</updated>
+  <updated>2018-11-18T04:37:09.132Z</updated>
   <id>http://cginmax.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>playMusic</title>
+    <link href="http://cginmax.github.io/2018/11/18/playMusic/"/>
+    <id>http://cginmax.github.io/2018/11/18/playMusic/</id>
+    <published>2018-11-18T04:37:09.000Z</published>
+    <updated>2018-11-18T04:37:09.132Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Linux一键搭建KMS激活服务器激活Windows和Office</title>
@@ -77,9 +98,9 @@
     <link href="http://cginmax.github.io/2018/11/10/build-blog/"/>
     <id>http://cginmax.github.io/2018/11/10/build-blog/</id>
     <published>2018-11-10T03:19:01.371Z</published>
-    <updated>2018-11-18T04:23:34.961Z</updated>
+    <updated>2018-11-18T04:41:06.153Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><blockquote><p>Hexo &#x662F;&#x4E00;&#x4E2A;&#x57FA;&#x4E8E;nodejs &#x7684;&#x9759;&#x6001;&#x535A;&#x5BA2;&#x7F51;&#x7AD9;&#x751F;&#x6210;&#x5668;&#xFF0C;&#x4F5C;&#x8005;&#x662F;&#x6765;&#x81EA;&#x53F0;&#x6E7E;&#x7684; Tommy Chen</p></blockquote>        <div id="aplayer-QFMEqigr" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-QFMEqigr"),            narrow: false,            autoplay: false,            showlrc: false,            music: {              title: "Rise",              author: "LoL",              url: "undefined",              pic: "",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><blockquote><p>Hexo &#x662F;&#x4E00;&#x4E2A;&#x57FA;&#x4E8E;nodejs &#x7684;&#x9759;&#x6001;&#x535A;&#x5BA2;&#x7F51;&#x7AD9;&#x751F;&#x6210;&#x5668;&#xFF0C;&#x4F5C;&#x8005;&#x662F;&#x6765;&#x81EA;&#x53F0;&#x6E7E;&#x7684; Tommy Chen</p></blockquote>        <div id="aplayer-OjsVulYX" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-OjsVulYX"),            narrow: false,            autoplay: true,            showlrc: false,            music: {              title: "创造101",              author: "火箭少女101",              url: "创造101.m4a",              pic: "/2018/11/10/build-blog/CGinMax.jpg",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
     
     <summary type="html">
     
