@@ -91,13 +91,13 @@
 <link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/minecraft-128px.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/minecraft-32x32.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/minecraft-16x16.png?v=5.1.4">
 
 
   <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
@@ -112,23 +112,25 @@
 
 
 
+  <link rel="alternate" href="/atom.xml" title="CGinMax的博客" type="application/atom+xml">
 
 
 
 
 
-<meta name="description" content="在C++中，自定义类时，需要重载一些特定的操作符，让自定义类具有跟基本数据类型一致的运算符操作。  自定义类的基本模型 类内部重载 类外部重载 不同点和原因  自定义类的基本模型用模板类更加直观的发现问题的所在。 12345678910111213template&amp;lt;class T&amp;gt;class Table&amp;#123;public:	Table();	T getData();	~Table">
+
+<meta name="description" content="&amp;#x5728;C++&amp;#x4E2D;&amp;#xFF0C;&amp;#x81EA;&amp;#x5B9A;&amp;#x4E49;&amp;#x7C7B;&amp;#x65F6;&amp;#xFF0C;&amp;#x9700;&amp;#x8981;&amp;#x91CD;&amp;#x8F7D;&amp;#x4E00;&amp;#x4E9B;&amp;#x7279;&amp;#x5B9A;&amp;#x7684;&amp;#x64CD;&amp;#x4F5C;&amp;#x7B26;&amp;#xFF0C;&amp;#x8BA9;&amp;#x81EA;&amp;#x5B">
 <meta name="keywords" content="C++,操作符重载">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++的输入输出流操作符的重载">
 <meta property="og:url" content="http://cginmax.github.io/2018/11/12/ioStreamOperatorOfC++/index.html">
 <meta property="og:site_name" content="CGinMax的博客">
-<meta property="og:description" content="在C++中，自定义类时，需要重载一些特定的操作符，让自定义类具有跟基本数据类型一致的运算符操作。  自定义类的基本模型 类内部重载 类外部重载 不同点和原因  自定义类的基本模型用模板类更加直观的发现问题的所在。 12345678910111213template&amp;lt;class T&amp;gt;class Table&amp;#123;public:	Table();	T getData();	~Table">
+<meta property="og:description" content="&amp;#x5728;C++&amp;#x4E2D;&amp;#xFF0C;&amp;#x81EA;&amp;#x5B9A;&amp;#x4E49;&amp;#x7C7B;&amp;#x65F6;&amp;#xFF0C;&amp;#x9700;&amp;#x8981;&amp;#x91CD;&amp;#x8F7D;&amp;#x4E00;&amp;#x4E9B;&amp;#x7279;&amp;#x5B9A;&amp;#x7684;&amp;#x64CD;&amp;#x4F5C;&amp;#x7B26;&amp;#xFF0C;&amp;#x8BA9;&amp;#x81EA;&amp;#x5B">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-11-12T09:58:09.475Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++的输入输出流操作符的重载">
-<meta name="twitter:description" content="在C++中，自定义类时，需要重载一些特定的操作符，让自定义类具有跟基本数据类型一致的运算符操作。  自定义类的基本模型 类内部重载 类外部重载 不同点和原因  自定义类的基本模型用模板类更加直观的发现问题的所在。 12345678910111213template&amp;lt;class T&amp;gt;class Table&amp;#123;public:	Table();	T getData();	~Table">
+<meta name="twitter:description" content="&amp;#x5728;C++&amp;#x4E2D;&amp;#xFF0C;&amp;#x81EA;&amp;#x5B9A;&amp;#x4E49;&amp;#x7C7B;&amp;#x65F6;&amp;#xFF0C;&amp;#x9700;&amp;#x8981;&amp;#x91CD;&amp;#x8F7D;&amp;#x4E00;&amp;#x4E9B;&amp;#x7279;&amp;#x5B9A;&amp;#x7684;&amp;#x64CD;&amp;#x4F5C;&amp;#x7B26;&amp;#xFF0C;&amp;#x8BA9;&amp;#x81EA;&amp;#x5B">
 
 
 
@@ -340,7 +342,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-12T17:58:09+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-12T10:00:39+08:00">
                 2018-11-12
               </time>
             
@@ -378,22 +380,40 @@
       
 
       
-        <p>在C++中，自定义类时，需要重载一些特定的操作符，让自定义类具有跟基本数据类型一致的运算符操作。</p>
+        <p>&#x5728;C++&#x4E2D;&#xFF0C;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x91CD;&#x8F7D;&#x4E00;&#x4E9B;&#x7279;&#x5B9A;&#x7684;&#x64CD;&#x4F5C;&#x7B26;&#xFF0C;&#x8BA9;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x5177;&#x6709;&#x8DDF;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4E00;&#x81F4;&#x7684;&#x8FD0;&#x7B97;&#x7B26;&#x64CD;&#x4F5C;&#x3002;</p>
 <ul>
-<li>自定义类的基本模型</li>
-<li>类内部重载</li>
-<li>类外部重载</li>
-<li>不同点和原因</li>
+<li>&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x7684;&#x57FA;&#x672C;&#x6A21;&#x578B;</li>
+<li>&#x7C7B;&#x5185;&#x90E8;&#x91CD;&#x8F7D;</li>
+<li>&#x7C7B;&#x5916;&#x90E8;&#x91CD;&#x8F7D;</li>
+<li>&#x4E0D;&#x540C;&#x70B9;&#x548C;&#x539F;&#x56E0;</li>
 </ul>
-<h1 id="自定义类的基本模型"><a href="#自定义类的基本模型" class="headerlink" title="自定义类的基本模型"></a>自定义类的基本模型</h1><p>用模板类更加直观的发现问题的所在。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="class"><span class="title">class</span> <span class="title">Table</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	Table();</span><br><span class="line">	<span class="function">T <span class="title">getData</span><span class="params">()</span></span>;</span><br><span class="line">	~Table();</span><br><span class="line">	<span class="comment">//...</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	T width;</span><br><span class="line">	T height;</span><br><span class="line">	T length;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h1 id="类内部重载"><a href="#类内部重载" class="headerlink" title="类内部重载"></a>类内部重载</h1><p>在类内部添加输入输出流操作符重载时，需要添加友元friend</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="class"><span class="title">class</span> <span class="title">Table</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	Table();</span><br><span class="line">	<span class="function">T <span class="title">getData</span><span class="params">()</span></span>;</span><br><span class="line">	~Table();</span><br><span class="line"></span><br><span class="line">	<span class="keyword">friend</span> <span class="built_in">std</span>::ostream&amp; <span class="keyword">operator</span>&lt;&lt;(<span class="built_in">std</span>::ostream&amp; os, Table&lt;T&gt;&amp; t)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="comment">//能够访问到内部private成员</span></span><br><span class="line">		<span class="keyword">return</span> os &lt;&lt; t.width &lt;&lt; <span class="string">" "</span> &lt;&lt; t.height &lt;&lt; <span class="string">" "</span> &lt;&lt; t.length;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//...</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	T width;</span><br><span class="line">	T height;</span><br><span class="line">	T length;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h1 id="类外部重载"><a href="#类外部重载" class="headerlink" title="类外部重载"></a>类外部重载</h1><p>类外部重载时，不需要添加友元，但需要声明为模板函数。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="class"><span class="title">class</span> <span class="title">Table</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	Table();</span><br><span class="line">	<span class="function">T <span class="title">getData</span><span class="params">()</span></span>;</span><br><span class="line">	~Table();</span><br><span class="line"></span><br><span class="line">	<span class="comment">//...</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	T width;</span><br><span class="line">	T height;</span><br><span class="line">	T length;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//输出流重载</span></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="class"><span class="title">std</span>:</span>:ostream&amp; <span class="keyword">operator</span>&lt;&lt;(<span class="built_in">std</span>::ostream&amp; os, Table&lt;T&gt;&amp; t)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//不能访问private成员</span></span><br><span class="line">	<span class="comment">//return os &lt;&lt; t.width &lt;&lt; " " &lt;&lt; t.height &lt;&lt; " " &lt;&lt; t.length;</span></span><br><span class="line">	<span class="keyword">return</span> os &lt;&lt; t.getData();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="不同点和原因"><a href="#不同点和原因" class="headerlink" title="不同点和原因"></a>不同点和原因</h1><p>在类内部定义时，需要添加为友元，类才能去识别该重载函数是内部成员函数。</p>
-<p>在类外部定义时，可以抛开友元属性，取而代之的是函数模板声明，毕竟类不能识别为它内部成员函数。在类外定义的重载函数是不能调用内部private成员的，要在类内部定义公共调用接口。</p>
-
+<h1 id="&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x7684;&#x57FA;&#x672C;&#x6A21;&#x578B;"><a href="#&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x7684;&#x57FA;&#x672C;&#x6A21;&#x578B;" class="headerlink" title="&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x7684;&#x57FA;&#x672C;&#x6A21;&#x578B;"></a>&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x7684;&#x57FA;&#x672C;&#x6A21;&#x578B;</h1><p>&#x7528;&#x6A21;&#x677F;&#x7C7B;&#x66F4;&#x52A0;&#x76F4;&#x89C2;&#x7684;&#x53D1;&#x73B0;&#x95EE;&#x9898;&#x7684;&#x6240;&#x5728;&#x3002;</p>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="class"><span class="title">class</span> <span class="title">Table</span>{</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	Table();</span><br><span class="line">	<span class="function">T <span class="title">getData</span><span class="params">()</span></span>;</span><br><span class="line">	~Table();</span><br><span class="line">	<span class="comment">//...</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	T width;</span><br><span class="line">	T height;</span><br><span class="line">	T length;</span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure>
+<h1 id="&#x7C7B;&#x5185;&#x90E8;&#x91CD;&#x8F7D;"><a href="#&#x7C7B;&#x5185;&#x90E8;&#x91CD;&#x8F7D;" class="headerlink" title="&#x7C7B;&#x5185;&#x90E8;&#x91CD;&#x8F7D;"></a>&#x7C7B;&#x5185;&#x90E8;&#x91CD;&#x8F7D;</h1><p>&#x5728;&#x7C7B;&#x5185;&#x90E8;&#x6DFB;&#x52A0;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x6D41;&#x64CD;&#x4F5C;&#x7B26;&#x91CD;&#x8F7D;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x53CB;&#x5143;friend</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="class"><span class="title">class</span> <span class="title">Table</span>{</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	Table();</span><br><span class="line">	<span class="function">T <span class="title">getData</span><span class="params">()</span></span>;</span><br><span class="line">	~Table();</span><br><span class="line"></span><br><span class="line">	<span class="keyword">friend</span> <span class="built_in">std</span>::ostream&amp; <span class="keyword">operator</span>&lt;&lt;(<span class="built_in">std</span>::ostream&amp; os, Table&lt;T&gt;&amp; t)</span><br><span class="line">	{</span><br><span class="line">		<span class="comment">//&#x80FD;&#x591F;&#x8BBF;&#x95EE;&#x5230;&#x5185;&#x90E8;private&#x6210;&#x5458;</span></span><br><span class="line">		<span class="keyword">return</span> os &lt;&lt; t.width &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; t.height &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; t.length;</span><br><span class="line">	}</span><br><span class="line">	<span class="comment">//...</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	T width;</span><br><span class="line">	T height;</span><br><span class="line">	T length;</span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure>
+<h1 id="&#x7C7B;&#x5916;&#x90E8;&#x91CD;&#x8F7D;"><a href="#&#x7C7B;&#x5916;&#x90E8;&#x91CD;&#x8F7D;" class="headerlink" title="&#x7C7B;&#x5916;&#x90E8;&#x91CD;&#x8F7D;"></a>&#x7C7B;&#x5916;&#x90E8;&#x91CD;&#x8F7D;</h1><p>&#x7C7B;&#x5916;&#x90E8;&#x91CD;&#x8F7D;&#x65F6;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x53CB;&#x5143;&#xFF0C;&#x4F46;&#x9700;&#x8981;&#x58F0;&#x660E;&#x4E3A;&#x6A21;&#x677F;&#x51FD;&#x6570;&#x3002;</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="class"><span class="title">class</span> <span class="title">Table</span>{</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	Table();</span><br><span class="line">	<span class="function">T <span class="title">getData</span><span class="params">()</span></span>;</span><br><span class="line">	~Table();</span><br><span class="line"></span><br><span class="line">	<span class="comment">//...</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	T width;</span><br><span class="line">	T height;</span><br><span class="line">	T length;</span><br><span class="line">}</span><br><span class="line"><span class="comment">//&#x8F93;&#x51FA;&#x6D41;&#x91CD;&#x8F7D;</span></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="class"><span class="title">std</span>:</span>:ostream&amp; <span class="keyword">operator</span>&lt;&lt;(<span class="built_in">std</span>::ostream&amp; os, Table&lt;T&gt;&amp; t)</span><br><span class="line">{</span><br><span class="line">	<span class="comment">//&#x4E0D;&#x80FD;&#x8BBF;&#x95EE;private&#x6210;&#x5458;</span></span><br><span class="line">	<span class="comment">//return os &lt;&lt; t.width &lt;&lt; &quot; &quot; &lt;&lt; t.height &lt;&lt; &quot; &quot; &lt;&lt; t.length;</span></span><br><span class="line">	<span class="keyword">return</span> os &lt;&lt; t.getData();</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h1 id="&#x4E0D;&#x540C;&#x70B9;&#x548C;&#x539F;&#x56E0;"><a href="#&#x4E0D;&#x540C;&#x70B9;&#x548C;&#x539F;&#x56E0;" class="headerlink" title="&#x4E0D;&#x540C;&#x70B9;&#x548C;&#x539F;&#x56E0;"></a>&#x4E0D;&#x540C;&#x70B9;&#x548C;&#x539F;&#x56E0;</h1><p>&#x5728;&#x7C7B;&#x5185;&#x90E8;&#x5B9A;&#x4E49;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x4E3A;&#x53CB;&#x5143;&#xFF0C;&#x7C7B;&#x624D;&#x80FD;&#x53BB;&#x8BC6;&#x522B;&#x8BE5;&#x91CD;&#x8F7D;&#x51FD;&#x6570;&#x662F;&#x5185;&#x90E8;&#x6210;&#x5458;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x5728;&#x7C7B;&#x5916;&#x90E8;&#x5B9A;&#x4E49;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x629B;&#x5F00;&#x53CB;&#x5143;&#x5C5E;&#x6027;&#xFF0C;&#x53D6;&#x800C;&#x4EE3;&#x4E4B;&#x7684;&#x662F;&#x51FD;&#x6570;&#x6A21;&#x677F;&#x58F0;&#x660E;&#xFF0C;&#x6BD5;&#x7ADF;&#x7C7B;&#x4E0D;&#x80FD;&#x8BC6;&#x522B;&#x4E3A;&#x5B83;&#x5185;&#x90E8;&#x6210;&#x5458;&#x51FD;&#x6570;&#x3002;&#x5728;&#x7C7B;&#x5916;&#x5B9A;&#x4E49;&#x7684;&#x91CD;&#x8F7D;&#x51FD;&#x6570;&#x662F;&#x4E0D;&#x80FD;&#x8C03;&#x7528;&#x5185;&#x90E8;private&#x6210;&#x5458;&#x7684;&#xFF0C;&#x8981;&#x5728;&#x7C7B;&#x5185;&#x90E8;&#x5B9A;&#x4E49;&#x516C;&#x5171;&#x8C03;&#x7528;&#x63A5;&#x53E3;&#x3002;</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
       
     </div>
     
@@ -412,7 +432,7 @@
           
             <a href="/tags/C/" rel="tag"># C++</a>
           
-            <a href="/tags/操作符重载/" rel="tag"># 操作符重载</a>
+            <a href="/tags/operator-Override/" rel="tag"># 操作符重载</a>
           
         </div>
       
@@ -425,8 +445,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/12/kms-script/" rel="next" title="Linux一键搭建KMS激活服务器激活Windows和Office">
-                <i class="fa fa-chevron-left"></i> Linux一键搭建KMS激活服务器激活Windows和Office
+              <a href="/2018/11/10/build-blog/" rel="next" title="个人博客搭建详解（Windows和Mac通用版）">
+                <i class="fa fa-chevron-left"></i> 个人博客搭建详解（Windows和Mac通用版）
               </a>
             
           </div>
@@ -434,6 +454,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/12/kms-script/" rel="prev" title="Linux一键搭建KMS激活服务器激活Windows和Office">
+                Linux一键搭建KMS激活服务器激活Windows和Office <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -543,13 +567,54 @@
           </nav>
 
           
-
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
           
 
           
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/CGinMax" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://space.bilibili.com/75543824/#/" target="_blank" title="BiliBili">
+                      
+                        <i class="fa fa-fw fa-youtube-play"></i>BiliBili</a>
+                  </span>
+                
+            </div>
           
 
           
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                更多Blog
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.baidu.com/" title="Title" target="_blank">Title</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html" title="Reuixiy" target="_blank">Reuixiy</a>
+                  </li>
+                
+              </ul>
+            </div>
           
 
           
